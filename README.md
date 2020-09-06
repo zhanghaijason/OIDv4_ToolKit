@@ -1,13 +1,16 @@
 <h1> Second fork fom theAIGuysCode</h1>
+I added sample_validation.py
+
     A problem I found in google image dataset is that sometimnes there is not enought data in validation set. For example, when you use the command
     ```bash
     python3 main.py downloader --Traffic_light --type_csv validation --limit 100
     ```
-    You may find that the data images in validation group is less than 20 (Tried this on Sep, 2020). So I think it is convenient to download all the dataset in train, using
+
+You may find that the data images in validation group is less than 20 (Tried this on Sep, 2020). So I think it is convenient to download all the dataset in train, using
     ```bash
     python3 main.py downloader --Traffic_light --type_csv train --limit 100
     ```
-    And use a python script to automatically sample 20% data to validation dataset by using
+And use a python script to automatically sample 20% data to validation dataset by using
      ```bash
     python3 sample_validation.py
     ```
