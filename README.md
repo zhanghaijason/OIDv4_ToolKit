@@ -10,11 +10,42 @@ You may find that the data images in validation group is less than 20 (Tried thi
 python3 main.py downloader --Traffic_light --type_csv train --limit 100
 ```
 After downloading, you should have 
+```
+main_folder
+│   main.py
+│
+└───OID
+    └───csv_folder
+    └───Dataset
+        └─── train
+             |
+             └───Traffic_light
+                  |
+                  |0fdea8a716155a8e.jpg
+                  |2fe4f21e409f0a56.jpg
+                  |...
+                  └───Labels
+                         |
+                         |0fdea8a716155a8e.txt
+                         |2fe4f21e409f0a56.txt
+                         |...
+```
 And use a python script to automatically sample 20% data to validation dataset by using
  ```bash
 python3 sample_validation.py
 ```
-    
+Then you will have a folder like:
+```
+main_folder
+│   main.py
+│
+└───OID
+    └───csv_folder
+    └───Dataset
+        └─── train
+        └─── validation
+```
+
 <h1> Forked repository and added conversion python script </h1>
 My added script is: 
 <strong>convert_annotations.py</strong>
